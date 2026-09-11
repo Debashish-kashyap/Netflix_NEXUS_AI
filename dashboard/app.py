@@ -979,11 +979,11 @@ with tab2:
         "tier":      ["Tier-1","Tier-1","Tier-1","Tier-1","Tier-2","Tier-2","Tier-2","Tier-2","Tier-3","Tier-3"],
     })
 
-    fig = px.scatter_mapbox(
+    fig = px.scatter_map(
         map_data, lat="lat", lon="lon", size="churn_rate",
         color="churn_rate", color_continuous_scale=["#2ecc71","#f5a623","#e50914"],
         hover_name="city", hover_data={"tier": True, "churn_rate": ":.0%"},
-        size_max=35, zoom=4, mapbox_style="carto-darkmatter",
+        size_max=35, zoom=4, map_style="carto-darkmatter",
         labels={"churn_rate": "Churn Rate"},
     )
     fig.update_layout(
